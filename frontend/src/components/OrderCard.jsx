@@ -5,10 +5,8 @@ function formatINR(amount) {
     return `₹${amount}`;
   }
 }
-
 export default function OrderCard({ order }) {
   if (!order) return null;
-
   return (
     <div className="rounded-2xl border bg-white p-4 shadow-sm">
       <div className="flex items-start justify-between gap-3">
