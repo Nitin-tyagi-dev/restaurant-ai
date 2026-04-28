@@ -2,7 +2,6 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import ChatBubble from "../components/ChatBubble.jsx";
 import OrderCard from "../components/OrderCard.jsx";
 import { chat, placeOrder } from "../api/api.js";
-
 function extractOrderConfirmed(text) {
   const idx = text.indexOf("ORDER_CONFIRMED:");
   if (idx === -1) return null;
@@ -35,7 +34,6 @@ export default function CustomerChat() {
   useEffect(() => bottomRef.current?.scrollIntoView({ behavior: "smooth" }), [messages, confirmedOrder]);
 
   const canSend = useMemo(() => !loading && input.trim().length > 0, [loading, input]);
-
   async function handleSend() {
     if (!canSend) return;
     setError("");
