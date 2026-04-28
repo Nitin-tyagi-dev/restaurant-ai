@@ -1,0 +1,15 @@
+com\restaurant\config\CorsConfig.class
+com\restaurant\controller\MenuController.class
+com\restaurant\model\Order.class
+com\restaurant\model\MenuItem.class
+com\restaurant\controller\ChatController.class
+com\restaurant\controller\OrderController.class
+com\restaurant\controller\ChatController$ChatRequest.class
+com\restaurant\service\MenuService.class
+com\restaurant\service\ClaudeService.class
+com\restaurant\service\OrderService.class
+com\restaurant\controller\OrderController$UpdateStatusRequest.class
+com\restaurant\RestaurantApplication.class
+com\restaurant\controller\OrderController$CreateOrderRequest.class
+com\restaurant\repository\OrderRepository.class
+com\restaurant\repository\MenuItemRepository.class
