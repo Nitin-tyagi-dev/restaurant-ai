@@ -8,7 +8,6 @@ import {
   updateMenuItem,
   updateOrderStatus,
 } from "../api/api.js";
-
 function safeParseItems(itemsStr) {
   try {
     const v = JSON.parse(itemsStr);
@@ -203,7 +202,6 @@ export default function OwnerDashboard() {
                   placeholder="Short, tasty description…"
                 />
               </div>
-
               <div className="grid grid-cols-2 gap-3">
                 <div>
                   <div className="text-xs font-semibold text-slate-600">Price (₹)</div>
@@ -257,7 +255,6 @@ export default function OwnerDashboard() {
               >
                 {isEditing ? "Save changes" : "Add item"}
               </button>
-
               {error ? <div className="text-sm font-medium text-rose-600">{error}</div> : null}
             </form>
           </div>
@@ -340,4 +337,3 @@ export default function OwnerDashboard() {
     </div>
   );
 }
-
