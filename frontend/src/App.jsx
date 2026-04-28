@@ -1,7 +1,7 @@
 import { Navigate, Route, Routes, Link, useLocation } from "react-router-dom";
 import CustomerChat from "./pages/CustomerChat.jsx";
 import OwnerDashboard from "./pages/OwnerDashboard.jsx";
-
+import Contact from "./components/Contact.jsx";
 function TopNav() {
   const location = useLocation();
   const isOwner = location.pathname.startsWith("/owner");
@@ -14,6 +14,12 @@ function TopNav() {
           <div className="leading-tight">
             <div className="text-sm font-semibold text-slate-900">Spice Garden</div>
             <div className="text-xs text-slate-500">AI Menu & Orders</div>
+            <Link
+                to="/contact"
+                className="rounded-xl border px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-slate-50"
+              >
+                Contact
+              </Link>
           </div>
         </div>
 
@@ -46,6 +52,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<CustomerChat />} />
         <Route path="/owner" element={<OwnerDashboard />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </div>
